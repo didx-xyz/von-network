@@ -3,10 +3,16 @@
 *.key
 *.pem
 
+# Backup files
+backup/
+
 # tmp script files
 *_DeploymentConfig.json
 *_BuildConfig.json
 tmp/
+
+# External scripts
+genesis_from_files.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

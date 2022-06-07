@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Lifecycle:Stable](https://img.shields.io/badge/Lifecycle-Stable-97ca00)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
 # VON Network
 
 A portable development level Indy Node network, including a Ledger Browser. The Ledger Browser (for example the BC Gov's [Ledger for the GreenLight Demo Application](http://greenlight.bcovrin.vonx.io/)) allows a user to see the status of the nodes of a network and browse/search/filter the Ledger Transactions.
@@ -22,11 +25,17 @@ In the `Domain` Ledger screen ([example](http://greenlight.bcovrin.vonx.io/brows
 
 New to VON Network?  We have a [tutorial about using VON Network](docs/UsingVONNetwork.md) to get you started.
 
+Note that in order to use Docker Desktop (> version 3.4.0), make sure you uncheck the "Use Docker Compose V2" in Docker Desktop > Preferences > General.  Refer to this issue for additional details; [#170](https://github.com/bcgov/von-network/issues/170#issuecomment-972898014)
+
+
+
 Want to see a full demo that includes applications and verifiable credentials being issued? The [VON Quick Start Guide](https://github.com/bcgov/greenlight/blob/master/docker/VONQuickStartGuide.md) provides the instructions for running a local instance of a full demo of the components, including an Indy Network, an instance of [TheOrgBook](https://github.com/bcgov/TheOrgBook) and [GreenLight](https://github.com/bcgov/greenlight). This is a great way to see the **VON Network** in action.
 
 ## Indy-Cli Container Environment
 
 This repository includes a fully containerized Indy-Cli environment, allowing you to use the Indy-Cli without having to build or install the Indy-SDK or any of its dependencies on your machine.
+
+For more information refer to [Using the containerized `indy-cli`](./docs/Indy-CLI.md)
 
 ## Ledger Troubleshooting
 
@@ -42,6 +51,7 @@ For examples of how to use this capability, refer to [Writing Transactions to a 
 The [tutorial about using VON Network](docs/UsingVONNetwork.md) has information on starting (and stopping) the network locally.
 
 ## Running the web server in Docker against another ledger
+
 
 1. Run docker to start the ledger, and pass in GENESIS_URL and LEDGER_SEED parameters:
 
@@ -136,9 +146,9 @@ GENESIS_URL=https://raw.githubusercontent.com/sovrin-foundation/sovrin/master/so
 3. Download this repository:
 
     ```bash
-    curl -L https://github.com/bcgov/von-network/archive/master.zip > bcovrin.zip && \
+    curl -L https://github.com/bcgov/von-network/archive/main.zip > bcovrin.zip && \
         unzip bcovrin.zip && \
-        cd von-network-master && \
+        cd von-network-main && \
         chmod a+w ./server/
     ```
 
